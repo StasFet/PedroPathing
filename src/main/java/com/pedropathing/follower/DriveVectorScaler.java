@@ -1,6 +1,10 @@
 package com.pedropathing.follower;
 
+import static com.pedropathing.follower.FollowerConstants.leftFrontMotorMulti;
+import static com.pedropathing.follower.FollowerConstants.leftRearMotorMulti;
 import static com.pedropathing.follower.FollowerConstants.maxPower;
+import static com.pedropathing.follower.FollowerConstants.rightFrontMotorMulti;
+import static com.pedropathing.follower.FollowerConstants.rightRearMotorMulti;
 
 import com.pedropathing.pathgen.MathFunctions;
 import com.pedropathing.pathgen.Vector;
@@ -124,6 +128,12 @@ public class DriveVectorScaler {
             wheelPowers[2] = (wheelPowers[2] / wheelPowerMax) * maxPowerScaling;
             wheelPowers[3] = (wheelPowers[3] / wheelPowerMax) * maxPowerScaling;
         }
+
+//        Shabsters custom part - these multipliers are available in FollowerConstants.java
+        wheelPowers[0] *= leftFrontMotorMulti;
+        wheelPowers[1] *= leftRearMotorMulti;
+        wheelPowers[2] *= rightFrontMotorMulti;
+        wheelPowers[3] *= rightRearMotorMulti;
 
         return wheelPowers;
     }

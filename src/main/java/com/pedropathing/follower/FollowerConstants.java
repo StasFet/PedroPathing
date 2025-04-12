@@ -62,6 +62,11 @@ public class FollowerConstants {
      *  Default Value: DcMotorSimple.Direction.FORWARD */
     public static DcMotorSimple.Direction rightRearMotorDirection = DcMotorSimple.Direction.FORWARD;
 
+    public static double  leftFrontMotorMulti = 1.0;
+    public static double  rightFrontMotorMulti = 1.0;
+    public static double  leftRearMotorMulti = 1.0;
+    public static double  rightRearMotorMulti = 1.0;
+
     /** The motor caching threshold
      *  Default Value: 0.01 */
     public static double motorCachingThreshold = 0.01;
